@@ -10,7 +10,7 @@ import Main from "./components/Pages/Main";
 import Login from "./components/Pages/Login";
 import News from "./components/Pages/News";
 import Profile from "./components/Pages/Profile";
-import Page_404 from "./components/Pages/Page_404";
+import Page404 from "./components/Pages/Page404";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -20,8 +20,8 @@ ReactDOM.render(
                     <Route index element={<Main />} />
                     <Route path="login" element={<Login />} />
                     <Route path="news" element={<News />} />
-                    <Route path="profile" element={<Profile/>} />
-                    <Route path="*" element={<Page_404/>}
+                    <Route path="profile" element={<Profile />} />
+                    <Route path="*" element={<Page404 />}
                     />
                 </Route>
             </Routes>

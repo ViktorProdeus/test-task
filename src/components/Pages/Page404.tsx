@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Page_404 = () => {
+const Page404 = () => {
     return (
         <div><h1>Страница не найдена</h1></div>
     );
 };
 
-export default Page_404;
+export default Page404;
