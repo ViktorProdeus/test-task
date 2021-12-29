@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.App h1 {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e7e7;
+    min-height: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Container div {
+    width: 100%;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navLink,
+.Container li {
+    color: black;
+    border-color: black;
+    text-decoration: none;
+    padding: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navLink {
+    padding: 5px 15px;
+    display: block;
+}
+
+.navLink,
+.Container li:hover {
+    color: black;
+    border-color: black;
+}
+
+.Container .activeClass {
+    padding: 5px 15px;
+    display: block;
+    color: red;
+    border-color: black;
+    text-decoration: none;
+}
+
+.form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.formField {
+    min-height: 62px;
+}
+
+.errorMessage {
+    color: red;
 }
