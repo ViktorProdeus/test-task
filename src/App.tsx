@@ -7,10 +7,12 @@ import './App.css';
 import { MenuList } from "@mui/material";
 import { NavigationLink } from "./components/NavigationLink/NavigationLink";
 import { setAuth } from "./redux/reducer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { AppRootStateType } from './redux/store';
 
 
 function App() {
+    const Login = useSelector<AppRootStateType, boolean>((state) => state.main.isAuth);
     const dispatch = useDispatch();
 
     const redirectToLogin = () => {
@@ -27,7 +29,7 @@ function App() {
                             <Button variant="outlined" component={"li"}><NavigationLink  to="/profile">Профиль</NavigationLink></Button>{" "}
                             <Button variant="outlined" component={"li"}><NavigationLink  to="/news">Новости</NavigationLink></Button>{" "}
                             <Button variant="outlined" component={"li"}><NavigationLink  to="/not_found">404</NavigationLink></Button>{" "}
-                            <Button variant="outlined" component={"li"}><NavigationLink onClick={redirectToLogin} to="/login">Логин</NavigationLink></Button>
+                            <Button variant="outlined" component={"li"}><NavigationLink onClick={redirectToLogin} to="/login">{Login ? "Выйти" : "Логин"}</NavigationLink></Button>
                         </MenuList>
                     </nav>
 

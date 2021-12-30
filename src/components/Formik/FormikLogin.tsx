@@ -38,7 +38,7 @@ export const FormikLogin = () => {
     }
 
     const pushValues = (values: ValuesType) => {
-        if(values.name !== "Admin" || values.password !== "12345") {
+        if(values.name.trim() !== "Admin" || values.password !== "12345") {
             setErrorMessage("Имя пользователя или пароль введены не верно")
         } else {
             dispatch(setName(values.name));
